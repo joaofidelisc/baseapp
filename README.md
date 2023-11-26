@@ -8,7 +8,7 @@ A ideia do projeto é facilitar o desenvolvimento de aplicativos móveis, ou sej
 -   É possível se cadastrar com e-mail e senha. O sistema realiza toda a verificação de e-mail incorreto, senha fraca, senhas não equivalentes e todas outras possibilidades de erros referente ao Firebase.
 
 ## Login de usuário;
-- É possível fazer login com e-mail e senha. O sistema realiza a verificação de e-mail ou senhas incorretas, além de todas outras possibilidades de erros referente ao Firebase.
+- É possível fazer login com e-mail e senha. O sistema realiza a verificação de e-mail ou senhas incorretas, além de todas outras possibilidades de erros referente ao Firebase;
 - Em caso de sucesso para o Login, o sistema redireciona para a tela principal, garantindo a persistência das informações.
 
 
