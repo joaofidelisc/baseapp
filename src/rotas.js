@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Tab = createNativeStackNavigator();
 
+import SplashScreen from "./telas/SplashScreen";
 import Login from "./telas/Login";
 import Cadastro from "./telas/Cadastro";
 import Principal from "./telas/Principal";
@@ -12,6 +13,11 @@ export default function Rotas() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
+        <Tab.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
         <Tab.Screen
           name="Login"
           component={Login}
