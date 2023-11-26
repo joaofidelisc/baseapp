@@ -7,5 +7,5 @@ export default StyleSheet.create({
     justifyContent: "flex-start",
     paddingTop: 25,
     paddingHorizontal: 20,
-  }
+  },
 });

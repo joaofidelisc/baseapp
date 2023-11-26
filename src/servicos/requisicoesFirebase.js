@@ -1,9 +1,13 @@
 import { auth } from "../config/firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, AuthErrorCodes } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  AuthErrorCodes,
+} from "firebase/auth";
 
-function errosFirebase (error) {
-  let mensagem = '';
-  switch(error.code) {
+function errosFirebase(error) {
+  let mensagem = "";
+  switch (error.code) {
     case AuthErrorCodes.EMAIL_EXISTS:
       mensagem = "E-mail já em uso";
       break;
@@ -21,26 +25,26 @@ function errosFirebase (error) {
 
 export async function cadastrar(email, senha) {
   const resultado = await createUserWithEmailAndPassword(auth, email, senha)
-  .then((dadosDoUsuario) => {
-    console.log(dadosDoUsuario);
-    return "sucesso"
-  })
-  .catch((error) => {
-    console.log(error)
-    return errosFirebase(error);
-  });
-  return resultado
+    .then((dadosDoUsuario) => {
+      console.log(dadosDoUsuario);
+      return "sucesso";
+    })
+    .catch((error) => {
+      console.log(error);
+      return errosFirebase(error);
+    });
+  return resultado;
 }
 
 export async function logar(email, senha) {
   const resultado = await signInWithEmailAndPassword(auth, email, senha)
-  .then((dadosDoUsuario) => {
-    console.log(dadosDoUsuario);
-    return "sucesso"
-  })
-  .catch((error) => {
-    console.log(error)
-    return "erro"
-  });
-  return resultado
+    .then((dadosDoUsuario) => {
+      console.log(dadosDoUsuario);
+      return "sucesso";
+    })
+    .catch((error) => {
+      console.log(error);
+      return "erro";
+    });
+  return resultado;
 }

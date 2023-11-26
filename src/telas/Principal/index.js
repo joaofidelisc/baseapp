@@ -1,16 +1,16 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import Cabecalho from '../../componentes/Cabecalho';
-import Produto from '../../componentes/Produtos';
-import estilos from './estilos';
-import { auth } from '../../config/firebase';
+import React from "react";
+import { View, Text } from "react-native";
+import Cabecalho from "../../componentes/Cabecalho";
+import Produto from "../../componentes/Produtos";
+import estilos from "./estilos";
+import { auth } from "../../config/firebase";
 
 export default function Principal({ navigation }) {
   const usuario = auth.currentUser;
 
-  function deslogar(){
+  function deslogar() {
     auth.signOut();
-    navigation.replace('Login');
+    navigation.replace("Login");
   }
 
   return (
@@ -20,6 +20,6 @@ export default function Principal({ navigation }) {
       <Produto nome="Tênis" preco="200,00" />
       <Produto nome="Camisa" preco="100,00" />
       <Produto nome="Suplementos" preco="150,00" />
-     </View>
+    </View>
   );
 }
