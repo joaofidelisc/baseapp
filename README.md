@@ -16,3 +16,6 @@ A ideia do projeto é facilitar o desenvolvimento de aplicativos móveis, ou sej
 - React Native / JavaScript;
 - Firebase;
 - Bibliotecas.
+
+## Para a segurança do seu projeto:
+- Após configurado o arquivo .env, acrescente-o no arquivo .gitignore.
