@@ -1,35 +1,47 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const Tab = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 import SplashScreen from "./telas/SplashScreen";
 import Login from "./telas/Login";
 import Cadastro from "./telas/Cadastro";
 import Principal from "./telas/Principal";
 
-export default function Rotas() {
+function RotaPrivada() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
+    <Tab.Navigator initialRouteName="Principal">
+      <Tab.Screen name="Principal" component={Principal} options={{ headerShown: false }}/>
+    </Tab.Navigator>
+  );
+}
+
+function Rotas() {
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+        <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
           options={{ headerShown: false }}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Login"
           component={Login}
           options={{ headerShown: false }}
         />
-        <Tab.Screen name="Cadastro" component={Cadastro} />
-        <Tab.Screen
+        <Stack.Screen name="Cadastro" component={Cadastro} />
+        <Stack.Screen
           name="Principal"
-          component={Principal}
+          component={RotaPrivada}
           options={{ headerShown: false }}
         />
-      </Tab.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+export default Rotas;

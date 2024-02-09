@@ -60,7 +60,7 @@ export default function Cadastro({ navigation }) {
         error={statusError}
         setError={setStatusError}
       />
-      <Botao onPress={() => realizarCadastro()}>CADASTRAR</Botao>
+      <Botao onPress={() => realizarCadastro()}>Cadastrar</Botao>
     </View>
   );
 }

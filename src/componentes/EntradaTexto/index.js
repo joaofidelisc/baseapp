@@ -25,7 +25,7 @@ export function EntradaTexto({
         onChangeText={onChangeText}
         style={[estilos.input, ...(style ? [style] : [])]}
         mode="outlined"
-        activeOutlineColor="#1E8187"
+        activeOutlineColor="#4CAF50"
         right={
           secureTextEntry ? (
             <TextInput.Icon

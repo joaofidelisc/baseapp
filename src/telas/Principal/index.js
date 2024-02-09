@@ -17,9 +17,6 @@ export default function Principal({ navigation }) {
     <View style={estilos.container}>
       <Cabecalho logout={deslogar} />
       <Text style={estilos.texto}>Usuário: {usuario.email} </Text>
-      <Produto nome="Tênis" preco="200,00" />
-      <Produto nome="Camisa" preco="100,00" />
-      <Produto nome="Suplementos" preco="150,00" />
     </View>
   );
 }
