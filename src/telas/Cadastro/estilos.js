@@ -14,5 +14,6 @@ export default StyleSheet.create({
     alignItems: "center",
     paddingTop: 25 * scaleHeight,
     paddingHorizontal: 20 * scaleWidth,
+    backgroundColor: "#FFFFFF"
   },
 });

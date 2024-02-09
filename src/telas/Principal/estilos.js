@@ -1,16 +1,18 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    paddingTop: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: height * 0.03, 
   },
   texto: {
-    fontSize: 20,
+    fontSize: height * 0.02, 
     fontWeight: "bold",
-    marginLeft: 10,
-    marginBottom: 20,
+    marginLeft: width * 0.03, 
+    marginBottom: height * 0.015, 
   },
 });
