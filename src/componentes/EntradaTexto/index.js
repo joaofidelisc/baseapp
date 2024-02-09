@@ -9,6 +9,7 @@ export function EntradaTexto({
   secureTextEntry,
   error,
   messageError,
+  style
 }) {
   const [secureMode, setSecureMode] = useState(secureTextEntry);
 
@@ -22,7 +23,7 @@ export function EntradaTexto({
         error={showError}
         secureTextEntry={secureMode}
         onChangeText={onChangeText}
-        style={estilos.input}
+        style={[estilos.input, ...(style ? [style] : [])]}
         mode="outlined"
         activeOutlineColor="#1E8187"
         right={

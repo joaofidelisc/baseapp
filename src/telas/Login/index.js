@@ -50,6 +50,7 @@ export default function Login({ navigation }) {
 
   return (
     <View style={estilos.container}>
+      <Text style={estilos.titulo}>SmartFolio</Text>
       {entradas.map((entrada) => {
         return (
           <EntradaTexto
@@ -63,19 +64,21 @@ export default function Login({ navigation }) {
           />
         );
       })}
+      <Botao onPress={() => realizarLogin()}>Acessar</Botao>
+      <Text style={estilos.textoNormal}>Não tem uma conta?</Text>
+      <Botao
+        style={estilos.botaoCadastro}
+        onPress={() => {
+          navigation.navigate("Cadastro");
+        }}
+      >
+        <Text style={estilos.textoBotaoCadastro}>Toque para criar uma agora.</Text>
+      </Botao>
       <Alerta
         mensagem={mensagemError}
         error={statusError}
         setError={setStatusError}
       />
-      <Botao onPress={() => realizarLogin()}>LOGAR</Botao>
-      <Botao
-        onPress={() => {
-          navigation.navigate("Cadastro");
-        }}
-      >
-        CADASTRAR USUÁRIO
-      </Botao>
     </View>
   );
 }
